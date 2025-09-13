@@ -1,0 +1,17 @@
+.locationSec {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  background-color: #efefef;
+}
+.locationSec div {
+  width: 24px;
+  height: 24px;
+}
+.locationSec p {
+    color: #636363;
+}

@@ -1,0 +1,39 @@
+import axios from "axios";
+import { getCookie, setCookie } from "../utils/cookies";
+import getNewToken from "../services/newToken";
+
+const api = axios.create({
+  baseURL: "http://localhost:3400/",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+api.interceptors.request.use(
+  (request) => {
+    const accessToken = getCookie("accessToken");
+    if (accessToken) {
+      request.headers["Authorization"] = `Bearer ${accessToken}`;
+      return request;
+    } else return request;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+api.interceptors.response.use(
+  (response) => {
+    return response.data;
+  },
+  async (error) => {
+    const originalRequest = error.config;
+    if (error.status === 401) {
+      const res = await getNewToken();
+      if (!res?.response) return;
+      setCookie(res.response);
+      return api(originalRequest);
+    }
+  }
+);
+
+export default api;

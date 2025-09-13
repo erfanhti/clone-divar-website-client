@@ -1,0 +1,36 @@
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.cityToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: solid 1px #a62626;
+  width: fit-content;
+  padding: 2px 10px;
+  border-radius: 24px;
+  background-color: #fff3f3;
+  color: #a62626;
+}
+
+.deleteAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+.buttonSec button {
+  width: 50%;
+}
+.buttonSec button:first-child {
+  color: #a62626;
+  border-color: #a62626;
+  background-color: #fffbfb;
+}
+
+.checkbox {
+  color: #a62626;
+}
+
+

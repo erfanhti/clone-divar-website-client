@@ -1,0 +1,32 @@
+/* Hide the spinner for number inputs */
+.noSpinner input[type="number"]::-webkit-outer-spin-button,
+.noSpinner input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.noSpinner input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.upload {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  font-weight: 400;
+  font-size: 1.14rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.upload input {
+  font-size: 1.14rem;
+  color: black;
+}
+.upload label {
+  color: rgba(0, 0, 0, 0.6);
+}
+.upload:hover {
+  border-color: black;
+}
