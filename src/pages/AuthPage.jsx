@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import CheckForm from "../components/AuthForms/CheckForm";
 import SendFormPage from "../components/AuthForms/SendFormPage";
 

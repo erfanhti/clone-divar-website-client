@@ -23,7 +23,7 @@ function Main() {
 
   return (
     <Grid2 container mt={4} spacing={2} size={{ xs: 12, sm: 10 }}>
-      {filteredPosts?.length === 0 && (<h3>آگهی در این شهر وجود ندارد</h3>)}
+      {filteredPosts?.length === 0 && <h3>آگهی در این شهر وجود ندارد</h3>}
       {!isPending &&
         data &&
         filteredPosts?.map((post) => (

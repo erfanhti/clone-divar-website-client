@@ -79,6 +79,7 @@ function Header() {
             display: "flex",
             justifyContent: "space-between",
             borderRadius: "16px",
+            height: "72px",
           }}
         >
           <Grid2 display="flex" gap={2}>
