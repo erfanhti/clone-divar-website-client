@@ -118,10 +118,10 @@ function PostList() {
               <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={post._id}>
                 <div className={styles.card}>
                   <div className={styles.content}>
-                    <p>{post.options.title}</p>
+                    <p>{post.options?.title}</p>
                     <div className={styles.detail}>
                       <p>{`${sp(post.amount.toString())} تومان`}</p>
-                      <p>{post.options.city}</p>
+                      <p>{post.options?.city}</p>
                       <div className={styles.deleteSec}>
                         <span>
                           {new Date(post.createdAt).toLocaleDateString("fa-IR")}
@@ -129,7 +129,7 @@ function PostList() {
                         <Tooltip title="حذف آگهی" placement="left-start">
                           <IconButton
                             id={post._id}
-                            name={post.options.title}
+                            name={post.options?.title}
                             edge="end"
                             aria-label="delete"
                             onClick={deleteHandler}

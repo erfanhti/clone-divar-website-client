@@ -8,6 +8,7 @@ import DashboardPage from "../pages/DashboardPage";
 import { useQuery } from "@tanstack/react-query";
 import { getProfile } from "../services/user";
 import { Grid2 } from "@mui/material";
+import Loader from "../utils/Loader";
 
 function Router() {
   const { data, isPending, isError } = useQuery({
@@ -18,7 +19,7 @@ function Router() {
   if (isPending)
     return (
       <Grid2 container justifyContent="center" alignItems="center">
-        
+        <Loader />
       </Grid2>
     );
 

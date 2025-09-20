@@ -18,7 +18,7 @@ function Main() {
 
   // فیلتر کردن آگهی‌ها بر اساس شهرهای انتخاب شده
   const filteredPosts = data?.posts.filter((post) =>
-    selectedCities.includes(post.options.city)
+    selectedCities.includes(post.options?.city)
   );
 
   return (
