@@ -7,7 +7,6 @@ import AdminPage from "../pages/AdminPage";
 import DashboardPage from "../pages/DashboardPage";
 import { useQuery } from "@tanstack/react-query";
 import { getProfile } from "../services/user";
-import { Oval } from "react-loader-spinner";
 import { Grid2 } from "@mui/material";
 
 function Router() {
@@ -19,14 +18,7 @@ function Router() {
   if (isPending)
     return (
       <Grid2 container justifyContent="center" alignItems="center">
-        <Oval
-          visible={true}
-          height="60"
-          width="60"
-          strokeWidth="6"
-          color="#a62626"
-          secondaryColor="#AFAAAA"
-        />
+        
       </Grid2>
     );
 
