@@ -129,7 +129,7 @@ function Header() {
                 }}
               >
                 {cookies ? (
-                  <>
+                  <div>
                     {data && data.role === "ADMIN" && (
                       <MenuItem
                         sx={{ fontSize: "18px" }}
@@ -153,7 +153,7 @@ function Header() {
                     >
                       خروج از حساب کاربری
                     </MenuItem>
-                  </>
+                  </div>
                 ) : (
                   <MenuItem
                     sx={{ fontSize: "18px" }}
